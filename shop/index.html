@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RAU SẠCH ĐĂK ĐOA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">
+    <img src="logo.png">
+  </div>
+
+  <input class="search" placeholder="Tìm rau củ...">
+
+  <div class="right">
+    <a href="cart.html">🛒 <span id="cart-count">0</span></a>
+
+    <!-- USER MENU FIX -->
+    <div class="user-menu" id="user-menu">
+      <span id="user-name"></span>
+
+      <div class="dropdown" id="dropdown" style="display:none;">
+        <p id="user-greeting"></p>
+        <button id="logout-btn">Đăng xuất</button>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+  <section class="hero">
+  <div class="slider">
+    <div class="slides" id="slides">
+      <img src="BANNER 1.png">
+      <img src="BANNER 2.png">
+    </div>
+  </div>
+
+  <div class="hero-text">
+    <h1>Rau sạch mỗi ngày</h1>
+    <p>Tươi – Sạch – Giao nhanh</p>
+  </div>
+</section>
+<!-- ===== ABOUT ===== -->
+<section class="about">
+  <div class="about-container">
+    <div class="about-text">
+      <h2>Rau sạch Mầm Xanh</h2>
+      <p>
+        Rau tại Mầm Xanh được trồng theo quy trình tự nhiên, không sử dụng hóa chất độc hại.
+        Chúng tôi kiểm soát chất lượng nghiêm ngặt từ khâu gieo trồng đến thu hoạch,
+        đảm bảo mang đến sản phẩm tươi ngon và an toàn cho gia đình bạn.
+      </p>
+      <p>
+        Nguồn rau được gieo trồng tại huyện Đăk Đoa thuộc của tỉnh Gia Lai,
+        nơi có khí hậu lý tưởng và đất gieo trồng màu mỡ giúp rau phát triển tự nhiên và giàu dinh dưỡng.
+      </p>
+    </div>
+
+    <div class="about-img">
+      <img src="vườn rau.jpg" alt="Nông trại rau">
+    </div>
+  </div>
+</section>
+
+
+
+<div class="container">
+  <aside class="sidebar">
+    <ul>
+      <li onclick="filterCategory('all')">Tất cả</li>
+      <li onclick="filterCategory('vegetable')">Rau</li>
+      <li onclick="filterCategory('fruit')">Trái cây</li>
+      <li onclick="filterCategory('root')">Củ</li>
+      <li onclick="filterCategory('combo')">Combo</li>
+    </ul>
+  </aside>
+
+  <main class="main">
+    <h2>Sản phẩm</h2>
+    <div id="products" class="grid"></div>
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

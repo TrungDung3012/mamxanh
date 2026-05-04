@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Giỏ hàng</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">🛒 Giỏ hàng</div>
+  <a href="index.html">← Trang chủ</a>
+</header>
+
+<div class="cart-page">
+
+  <div class="cart-left">
+
+    <div class="address-box">
+      <h3>📍 Địa chỉ nhận hàng</h3>
+
+      <div id="address-list"></div>
+
+      <button onclick="openAddressModal()">+ Thêm địa chỉ</button>
+    </div>
+
+    <div id="cart"></div>
+
+  </div>
+
+  <div class="cart-summary">
+    <h3>🧾 Tóm tắt đơn hàng</h3>
+
+    <p>Tạm tính: <span id="subtotal">0</span>đ</p>
+    <p>Phí ship: <span id="shipping">0</span>đ</p>
+    <p>Giảm giá: <span id="discount">0</span>đ</p>
+
+    <hr>
+
+    <h2>💰 Tổng thanh toán: <span id="total">0</span>đ</h2>
+
+    <button onclick="clearCart()">Xóa giỏ</button>
+    <button onclick="checkout()">Thanh toán</button>
+  </div>
+
+</div>
+
+<!-- MODAL NHẬP ĐỊA CHỈ -->
+<div id="address-modal" class="modal">
+  <div class="modal-content">
+    <h3>Thêm địa chỉ</h3>
+
+    <input id="m-name" placeholder="Tên người nhận">
+    <input id="m-phone" placeholder="Số điện thoại">
+    <input id="m-province" placeholder="Tỉnh / Thành phố">
+    <input id="m-district" placeholder="Quận / Huyện">
+    <input id="m-address" placeholder="Số nhà, đường">
+
+    <div class="modal-actions">
+      <button onclick="saveAddressModal()">Lưu</button>
+      <button onclick="closeAddressModal()">Hủy</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
